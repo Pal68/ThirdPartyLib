@@ -86,7 +86,7 @@ def getLBPMatrix(img,chanel):
     return lbp
 
 def getUniFormLBPHist(matr):
-    """функция возвращает гитограмму распределения униформных LBP """
+    """функция возвращает гиcтограму распределения униформных LBP """
     uniform_lbp= [1, 2, 3, 4, 6, 7, 8, 12, 14, 15, 16, 24, 28, 30, 31, 32, 48, 56, 60, 62, 63, 64, 96, 112, 120,
                   124, 126, 127, 128, 129, 131, 135, 143, 159, 191, 192, 193, 195, 199, 207, 223, 224, 225, 227,
                   231, 239, 240, 241, 243, 247, 248, 249, 251, 252, 253, 254]
@@ -178,10 +178,8 @@ def main():
         global item_
         global cur_num_arr
         global n1
-        global n2
         if item_ < len(cur_num_arr)-1:
             n1 = f'{cur_num_arr[item_][0]}'
-            # n2 = f'{tmp[item_][1]}'
             item_ = item_ + 1
         update_images()
         recognize_number(n1)
@@ -195,7 +193,6 @@ def main():
         global n2
         if item_ > 1:
             n1 = f'{cur_num_arr[item_][0]}'
-            # n2 = f'{tmp[item_][1]}'
             item_ = item_ - 1
         update_images()
         label2.delete(0, tk.END)
